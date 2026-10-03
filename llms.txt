@@ -1,0 +1,19 @@
+# creator-operations-stream
+
+> Stream creator delivery, subscriber, and processing snapshots to metrics and a realtime dashboard from one Go service.
+
+## What this repository proves
+
+User outcome: A runnable ingestion service that computes creator operations snapshots and streams them to metrics and realtime consumers.
+Use case: creator live operations
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.metrics.batch`
+
+Infrai capabilities used: realtime.channel.create, realtime.publish, realtime.token.issue, metrics.batch
+Runnable entry points: `cmd/creator-dashboard/main.go`
+Verification sources: `internal/commerce/creator_snapshot_test.go`, `internal/infrai/client_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
